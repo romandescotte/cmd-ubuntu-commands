@@ -1,0 +1,83 @@
+sudo apt update: fetchea los paquetes actualizables de ubuntu
+sudo apt upgrade: instala los paquetes
+sudo apt-get purge --auto-remove nodejs: borra nodejs y todas sus dependencias
+apt list --installed: muestra los paquetes instalados
+
+	
+ls -a: all, incluye ocultos
+
+ls -l //en forma de lista y con los permisos de escritura
+
+ls -la //en forma de lista incluye ocultos
+
+ls -1 //en forma de lista sin los permisos
+
+clear o CTRL+L
+borra la pantalla
+
+pwd 
+
+mkdir
+
+mv
+
+history
+
+touch leer.txt
+crea archivo
+
+nano leer.txt 
+abre editor de texto
+
+cat leer.txt
+
+mv leer.txt leerx2.txt 
+  
+rm -rf 
+
+more leer.txt
+para leer
+
+tail leer.txt
+para leer
+
+cp leer.txt leercopy.txt
+para copiar
+
+
+
+dif leer.txt leercopy.txt
+ver las diferencias entre los dos archivos
+
+open leer.txt
+
+
+Para renombrar con un prefijo todos los archivos en una carpeta:
+
+sudo apt install rename
+
+find . -name "*.pdf" | rename -d 's/^/{prefijo_sin_las_llaves}/'
+
+fuentes:
+https://askubuntu.com/questions/1165503/how-to-rename-all-files-in-a-folder
+https://stackoverflow.com/questions/66369572/append-a-prefix-to-all-files-recursively-with-rename
+
+-------------
+
+Para remover sufijo de todos los archivos ne una carpeta:
+
+rename -n 's/\.\d+\.txt$/\.txt/' *
+
+Hay que correrlo sin el -n para que lo haga efectivo, con esa badnera solo previsualiza los cambios.
+
+Here's what the regular expression ^\d{8}_\d\d\K\.\d+ does:
+
+^ anchors to the beginning of the line.
+\d{8} matches a sequence of exactly eight digits.
+_ matches a literal _. It is not special.
+\d\d matches two more digits.
+\K forgets the preceding matched characters. These are the characters we want to keep, after all, not the ones we want to replace. The effect is to ensure those characters are present just before the part we will actually replace.
+\. matches a literal .. The backslash is necessary because when a dot appears in a regular expression it otherwise matches any single character.
+\d+ matches one or more digits.
+
+fuentes: https://askubuntu.com/questions/976368/how-to-remove-characters-from-file-names-using-command-line

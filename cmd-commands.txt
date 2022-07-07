@@ -1,0 +1,19 @@
+// crear archivo con texto
+echo This is sample text > MyFile.txt
+
+//crea archivo y entra en modo edicion, se sale y guarda con CTRL+C
+copy con archivo.txt 
+
+//abre archivo con notepad
+notepad SampleDoc.txt
+
+//loop para crear 10 archivos con nombre del 1 al 10.txt
+for /l %a in (1 1 10) do type nul > "%a.txt"
+
+//muestra arbol de directorios
+tree /F
+
+//borra directorios aunque tengan archivos y subdirectorios dentro
+rmdir /s
+
+
